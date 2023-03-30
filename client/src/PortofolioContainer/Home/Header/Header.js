@@ -18,33 +18,35 @@ export default function Header() {
     if (screenIndex < 0) return;
   };
 
-  let currentScreenSubscription =
-    ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
+  let currentScreenSubscription = ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((screen, i) => (
+    return (
+    TOTAL_SCREENS.map((screen, i) => (
       <div
         key={screen.screen_name}
-        className={getHeaderOptionsClass(i)}
+        className={getHeaderOptionsClasses(i)}
         onClick={() => switchScreen(i, screen)}
       >
         <span>{screen.screen_name}</span>
       </div>
-    ));
+    ))
+    )
   };
-
-  const getHeaderOptionsClass = (index) => {
-    let classes = "header-option";
-    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperetor";
-
-    if (selectedScreen === index) classes += "selected-header-option";
-    return;
+  
+  const getHeaderOptionsClasses = (index) => {
+    let classes = "header-option ";
+    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator ";
+ 
+    if (selectedScreen === index) classes += "selected-header-option ";
+ 
+    return classes;
   };
-
+  
   const switchScreen = (index, screen) => {
     let screenComponent = document.getElementById(screen.screen_name);
     if (!screenComponent) return;
-
+  
     screenComponent.scrollIntoView({ behavior: "smooth" });
     setSelectedScreen(index);
     setShowHeaderOptions(false);
@@ -68,7 +70,7 @@ export default function Header() {
           </div>
           <div
             className={
-              showHeaderOptions
+              (showHeaderOptions)
                 ? "header-options show-hamburger-options"
                 : "header-options"
             }
