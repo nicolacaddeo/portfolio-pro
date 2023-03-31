@@ -45,4 +45,6 @@
     width: 35px;
     border-radius: 10px;
     background-color: var(--dark-orange);
+    position: relative;
+    bottom: 3px;
 }
