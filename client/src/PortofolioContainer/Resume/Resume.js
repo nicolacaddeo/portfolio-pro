@@ -21,10 +21,10 @@ export default function Resume(props) {
         <div className="resume-heading">
           <div className="resume-main-heading">
             <div className="heading-bullet"></div>
-            <span>{props.heading ? props.heading : ""}</span>
-            {props.fromDate && props.toDate ? (
-              <div className="heading-date">
-                {props.fromDate + "-" + props.toDate}
+            <span className="main-title">{props.heading ? props.heading : ""}</span>
+            {props.fromDate || props.toDate ? (
+              <div className="heading-date mobile-dates">
+                {props.fromDate + props.toDate}
               </div>
             ) : (
               <div></div>
@@ -62,15 +62,15 @@ export default function Resume(props) {
 
   const projectDetails = [
     {
-      title: "Sito Web Portfolio Personale",
-      duration: { fromDate: "2023", toDate: "2023" },
+      title: "Portfolio Personale",
+      duration: { fromDate: "2023", toDate: "" },
       description:
         "Un portfolio personale per mostarare tutti i miei dettagli e progetti",
       subHeading: "Tecnologie utilizzate: React JS, Node JS",
     },
     {
       title: "IceTime",
-      duration: { fromDate: "2023", toDate: "2023" },
+      duration: { fromDate: "2023", toDate: "" },
       description:
         "Una Web App per la gestione del tempo con un sistema di login utente e la possibilitá di creare eventi e liste di ToDos",
       subHeading:
@@ -78,7 +78,7 @@ export default function Resume(props) {
     },
     {
       title: "BoolBnB",
-      duration: { fromDate: "2022", toDate: "2022" },
+      duration: { fromDate: "2022", toDate: "" },
       description:
         "Una replica stile AirBnB per la prenotazione online di B&B con funzioni di login utente/admin, geolocalizzazione e simulazione di pagamento",
       subHeading: "Tecnologie utilizzate: Vue JS, Bootstrap, Laravel, MySQL",
@@ -93,21 +93,21 @@ export default function Resume(props) {
           "Accademy Java di 6 settimane incentrata su Java, MySQL e JDBC con realizzazione di progetto finale"
         }
         fromDate={"2023"}
-        toDate={"2023"}
+        toDate={""}
       />
       <ResumeHeading
-        heading={"Boolean Careers Master Full Stack Developer"}
+        heading={"Boolean Careers"}
         subHeading={
-          "Sei mesi di corso nel quale ho appreso linguaggi come HTML5, CSS, JavaScript, PHP, SQL. Inoltre ho apreso l'utilizzo di framework come Laravel e Vue JS"
+          "Sei mesi di corso nel quale ho appreso linguaggi come HTML5, CSS, JavaScript, PHP, SQL. Inoltre ho appreso l'utilizzo di framework come Laravel e Vue JS"
         }
         fromDate={"2022"}
-        toDate={"2022"}
+        toDate={""}
       />
       <ResumeHeading
         heading={"Liceo Scientifico G.Marconi"}
         subHeading={"Maturitá Scientifica"}
-        fromDate={"2013"}
-        toDate={"2019"}
+        fromDate={"2019"}
+        toDate={""}
       />
     </div>,
     <div className="resume-screen-container single-experience" key="work-experience">
@@ -115,7 +115,7 @@ export default function Resume(props) {
         heading={"Boolean Careers"}
         subHeading={"Jr. Full Stack Web Developer Trainee"}
         fromDate={"2022"}
-        toDate={"2022"}
+        toDate={""}
       />
       <div className="experience-description">
         <span className="resume-description-text">
@@ -125,7 +125,7 @@ export default function Resume(props) {
       <div className="experience-description">
         <span className="resume-description-text">
           - Svolgimento di esercizi pomeridiani a difficoltà crescente nei quali
-          replicare proggetti reali e abituarsi al mindset dello sviluppatore
+          replicare progetti reali e abituarsi al mindset dello sviluppatore
         </span>
         <br />
         <span className="resume-description-text">
@@ -142,7 +142,7 @@ export default function Resume(props) {
         {programmingSkillsDetails.map((skill, index) => (
           <div className="skill-parent" key={index}>
             <div className="heading-bullet"></div>
-            <span>{skill.skill}</span>
+            <span className="skill-name">{skill.skill}</span>
             <div className="skill-percentage">
               <div
                 style={{ width: skill.ratingPercentage + "%" }}
