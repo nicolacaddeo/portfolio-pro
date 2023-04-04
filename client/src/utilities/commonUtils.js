@@ -13,11 +13,11 @@ export const TOTAL_SCREENS = [
     component: AboutMe,
   },
   {
-    screen_name: "Resume",
+    screen_name: "Riepilogo",
     component: Resume,
   },
   {
-    screen_name: "ContactMe",
+    screen_name: "Contattami",
     component: ContactMe,
   },
 ];

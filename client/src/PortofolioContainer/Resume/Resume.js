@@ -225,7 +225,7 @@ export default function Resume(props) {
       id={props.id || ""}
     >
       <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"I miei dettagli"} />
+        <ScreenHeading title={"Riepilogo"} subHeading={"I miei dettagli"} />
         <div className="resume-card">
           <div className="resume-bullets">
             <div className="bullet-container">
