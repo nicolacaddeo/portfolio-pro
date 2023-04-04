@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animation";
-import './AboutMe.css';
-
+import "./AboutMe.css";
 
 export default function AboutMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -37,7 +36,10 @@ export default function AboutMe(props) {
   };
 
   return (
-    <div className="about-me-container screen-container fade-in" id={props.id || ""}>
+    <div
+      className="about-me-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Perché scegliermi?"} />
         <div className="about-me-card">
@@ -53,16 +55,19 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-            <button className="btn primary-btn">
-              {""}
-              Hire Me{" "}
-            </button>
-            <a
-              href="nicola_giovanni_caddeo_cv.pdf"
-              download="Nicola Giovanni Caddeo cv.pdf"
-            >
-              <button className="btn highlighted-btn">Get Resume</button>
-            </a>
+              <button
+                className="btn primary-btn"
+                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              >
+                {""}
+                Hire Me{" "}
+              </button>
+              <a
+                href="nicola_giovanni_caddeo_cv.pdf"
+                download="Nicola Giovanni Caddeo cv.pdf"
+              >
+                <button className="btn highlighted-btn">Get Resume</button>
+              </a>
             </div>
           </div>
         </div>
