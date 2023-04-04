@@ -11,7 +11,7 @@ export default class ScrollService {
     window.addEventListener("scroll", this.checkCurrentScreenUnderViewport);
   }
   scrollToHireMe = () => {
-    let contactMeScreen = document.getElementById("Contact me");
+    let contactMeScreen = document.getElementById("ContactMe");
     if (!contactMeScreen) return;
     contactMeScreen.scrollIntoView({ behavior: "smooth" });
   };
@@ -53,7 +53,7 @@ export default class ScrollService {
       let partiallyVisible = this.isElementInView(screenFromDOM, "partial");
 
       if(fullyVisible || partiallyVisible) {
-        if(partiallyVisible && screen.alreadyRendered) {
+        if(partiallyVisible && !screen.alreadyRendered) {
             ScrollService.currentScreenFadeIn.next({
                 fadeInScreen: screen.screen_name
             });
