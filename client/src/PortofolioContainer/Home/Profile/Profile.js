@@ -52,7 +52,7 @@ export default function Profile() {
                 />
               </h1>
               <span className="profile-role-tagline">
-                Learning code every day lorem ipsum dolor sit amet
+                Learning code every day
               </span>
             </span>
           </div>

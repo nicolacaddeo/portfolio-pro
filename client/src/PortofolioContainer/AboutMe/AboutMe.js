@@ -14,7 +14,7 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Sono un giovane Full Stack Web Developer di 23 anni appassionato al mondo della tecnologia. Dopo aver interrotto gli studi all'università, la mia passione per l'informatica e la curiosità per tutto ció che riguarda il mondo del web hanno avuto la meglio e sono felice di essere pronto a dare il mio contributo nel settore.",
     highlights: {
       bullets: [
         "Jr. Full Stack web developer",
