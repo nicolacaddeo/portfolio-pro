@@ -63,13 +63,13 @@ export default function Profile() {
               onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
             >
               {" "}
-              Hire Me
+              Assumimi
             </button>
             <a
               href="nicola_giovanni_caddeo_cv.pdf"
               download="Nicola Giovanni Caddeo cv.pdf"
             >
-              <button className="btn highlighted-btn">Get Resume</button>
+              <button className="btn highlighted-btn">Scarica CV</button>
             </a>
           </div>
         </div>
