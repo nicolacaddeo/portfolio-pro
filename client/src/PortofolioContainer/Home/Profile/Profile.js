@@ -1,5 +1,5 @@
 import React from "react";
-import Typical from "react-typical";
+import Typewriter from "typewriter-effect";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 
@@ -38,18 +38,17 @@ export default function Profile() {
               {" "}
               <h1>
                 {" "}
-                <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Nicola Dev",
-                    1000,
-                    "Jr. Full Stack Developer",
-                    1000,
-                    "Laravel Dev",
-                    1000,
-                    "Java/OOP",
-                    1000,
-                  ]}
+                <Typewriter 
+                  options={{
+                    loop: true,
+                  }}
+                  onInit={(typewriter) => {
+                    typewriter.typeString("NicolaDev").pauseFor(900).deleteChars(10)
+                    .typeString("Jr. Full Stack Developer").pauseFor(900).deleteChars(24)
+                    .typeString("PHP / Laravel").pauseFor(900).deleteChars(13)
+                    .typeString("JAVA / OOP").pauseFor(900).deleteChars(10)
+                    .start();
+                  }}
                 />
               </h1>
               <span className="profile-role-tagline">
