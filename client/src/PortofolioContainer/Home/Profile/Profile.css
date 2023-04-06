@@ -154,4 +154,7 @@
   .profile-details {
     width: 90%;
   }
+  .profile-details-role h1 {
+    font-size: 20px;
+  }
 }
