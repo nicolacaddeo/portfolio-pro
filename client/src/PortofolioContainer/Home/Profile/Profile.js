@@ -4,6 +4,13 @@ import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 
 export default function Profile() {
+  const typeEffectData = [
+    "NicolaDev",
+    "JavaScript / Vue JS",
+    "PHP / Laravel",
+    "JAVA / OOP",
+  ];
+
   return (
     <div className="profile-container">
       <div className="profile-parent">
@@ -32,21 +39,23 @@ export default function Profile() {
               {" "}
               <h1>
                 {" "}
-                <Typewriter 
+                <Typewriter
                   options={{
                     loop: true,
                   }}
                   onInit={(typewriter) => {
-                    typewriter.typeString("NicolaDev").pauseFor(900).deleteChars(10)
-                    .typeString("Jr. Full Stack Developer").pauseFor(900).deleteChars(24)
-                    .typeString("PHP / Laravel").pauseFor(900).deleteChars(13)
-                    .typeString("JAVA / OOP").pauseFor(900).deleteChars(10)
-                    .start();
+                    for (let i = 0; i < typeEffectData.length; i++) {
+                      typewriter
+                        .typeString(typeEffectData[i])
+                        .pauseFor(900)
+                        .deleteChars(typeEffectData[i].length)
+                        .start();
+                    }
                   }}
                 />
               </h1>
               <span className="profile-role-tagline">
-                Learning code every day
+                Jr. Full Stack Web Developer
               </span>
             </span>
           </div>
