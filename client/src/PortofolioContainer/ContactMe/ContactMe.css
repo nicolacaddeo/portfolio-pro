@@ -136,3 +136,8 @@ button .load img{
     flex: 0.9;
   }
 }
+@media screen and (max-width: 940px){
+  .back-form .img-back {
+    margin-bottom: 60px;
+  }
+}
