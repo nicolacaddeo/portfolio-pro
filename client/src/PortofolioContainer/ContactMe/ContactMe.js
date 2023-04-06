@@ -79,12 +79,6 @@ export default function ContactMe(props) {
           <a href="https://www.instagram.com/nicolacaddeoo/">
             <i className="fa fa-instagram"></i>
           </a>
-          <a href="https://www.youtube.com/">
-            <i className="fa fa-youtube-square"></i>
-          </a>
-          <a href="https://www.twitter.com/">
-            <i className="fa fa-twitter"></i>
-          </a>
         </div>
         <div className="back-form">
           <div className="img-back">

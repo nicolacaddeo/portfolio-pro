@@ -19,12 +19,6 @@ export default function Profile() {
               <a href="https://www.instagram.com/nicolacaddeoo/">
                 <i className="fa fa-instagram"></i>
               </a>
-              <a href="https://www.youtube.com/">
-                <i className="fa fa-youtube-square"></i>
-              </a>
-              <a href="https://www.twitter.com/">
-                <i className="fa fa-twitter"></i>
-              </a>
             </div>
           </div>
           <div className="profile-details-name">
